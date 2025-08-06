@@ -1,4 +1,5 @@
 from cli.cli import Cli
+from cli.check import check_config
 from util.config_obj import Config
 
 def main():
