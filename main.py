@@ -1,5 +1,8 @@
+from cli.cli import Cli
+
 def main():
-    print("Hello from opfo!")
+    cli = Cli()
+    args = cli.setup()
 
 
 if __name__ == "__main__":
