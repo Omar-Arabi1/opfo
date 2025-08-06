@@ -11,6 +11,7 @@ class Cli:
         parser = argparse.ArgumentParser(prog="opfo", description="opfo is an advanced file organizer implemented in python")
         parser.add_argument("-V", "--version", action="version",version=f"%(prog)s 0.1.0")
         parser.add_argument("-c", "--check", action="store_true", help="check if the current config file is valid")
+        parser.add_argument("-v", "--verbose", action="store_true", help="gives more insight on what is happening the organization of files happens")
         
         return parser.parse_args()
 
@@ -23,4 +24,7 @@ class Cli:
                 sys.exit(1)
             logger.info("All Good!")
             sys.exit(0)
-        organize_files(config_file=config_file)
+        if args.verbose:
+            organize_files(config_file=config_file, verbose=True)
+            sys.exit(0)
+        organize_files(config_file=config_file, verbose=False)
