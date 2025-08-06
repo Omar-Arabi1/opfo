@@ -1,6 +1,7 @@
 from argparse import Namespace
 import argparse
 import sys
+from colorama import Fore
 
 from .check import check_config
 
@@ -18,4 +19,4 @@ class Cli:
             is_ok = check_config(config_file=config_file)
             if not is_ok:
                 sys.exit(1)
-            print("All Good!")
+            print(Fore.GREEN + "All Good!")
