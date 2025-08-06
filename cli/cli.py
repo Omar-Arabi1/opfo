@@ -4,6 +4,7 @@ import sys
 
 from .check import check_config
 from util.get_logger import get_logger
+from .organize_files import organize_files
 
 class Cli:
     def setup(self) -> Namespace:
@@ -21,3 +22,5 @@ class Cli:
             if not is_ok:
                 sys.exit(1)
             logger.info("All Good!")
+            sys.exit(0)
+        organize_files(config_file=config_file)
