@@ -1,18 +1,29 @@
 import json
 import os
+import logging
+import sys
 
-from custom_exceptions.config_exceptions import InvalidExtention, DefaultPathIsFile, DefaultPathDoesNotExist
-
-def check_config(config_file: str) -> None:
+def check_config(config_file: str) -> bool:
+    is_ok = True
     with open(config_file, 'r', encoding='utf-8') as file:
-        config: dict = json.load(file)
+        try:
+            config: dict = json.load(file)
+        except json.decoder.JSONDecodeError as e:
+            logging.fatal(f" {e}")
+            sys.exit(1)
 
     for extension, ext_dir in config.items():
         if extension[0] != ".":
-            raise InvalidExtention(message="the extension does not start with .")
+            logging.error(f" extension {extension} does not start with .")
+            is_ok = False
         
         if os.path.isfile(ext_dir):
-            raise DefaultPathIsFile(message="the default path to the extension is a file, hint: make it a dir")
+            logging.error(f" the default path {ext_dir} to the extension {extension} is a file, hint: make it a dir")
+            is_ok = False
         
         if not os.path.exists(ext_dir):
-            raise DefaultPathDoesNotExist(message="teh default path to the extension does not exist")
+            logging.error(f" the default path {ext_dir} to the extension {extension} does not exist")
+            is_ok = False
+    
+
+    return is_ok
