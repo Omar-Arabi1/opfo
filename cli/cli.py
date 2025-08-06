@@ -1,9 +1,9 @@
 from argparse import Namespace
 import argparse
 import sys
-from colorama import Fore
 
 from .check import check_config
+from util.get_logger import get_logger
 
 class Cli:
     def setup(self) -> Namespace:
@@ -15,8 +15,9 @@ class Cli:
 
 
     def route_options(self, args: Namespace, config_file: str) -> None:
+        logger = get_logger()
         if args.check:
             is_ok = check_config(config_file=config_file)
             if not is_ok:
                 sys.exit(1)
-            print(Fore.GREEN + "All Good!")
+            logger.info("All Good!")

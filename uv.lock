@@ -29,15 +29,11 @@ name = "opfo"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "colorama" },
     { name = "loguru" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "colorama", specifier = ">=0.4.6" },
-    { name = "loguru", specifier = ">=0.7.3" },
-]
+requires-dist = [{ name = "loguru", specifier = ">=0.7.3" }]
 
 [[package]]
 name = "win32-setctime"
