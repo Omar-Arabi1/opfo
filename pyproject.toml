@@ -12,4 +12,4 @@ maintainers = [
 ]
 
 [project.scripts]
-opfo = "main:main"
+opfo = "opfo_cli.__main__:main"
