@@ -43,7 +43,7 @@ some things that may make your config invalid:
 - you have the path pointing to a file not a directory `/home/<user>/Pictures/pic.png`
 - the path you are pointing to doesn't exist `i/do/not/exist`
 
-[!TIP]
+> [!TIP]
 > *if you deleted or changed a path to a directory that was pointed to by an extension make sure to change it or that*
 > *would result in an error that is why it is recommended to run --check whenever you changed something related to the*  > *config*
 
