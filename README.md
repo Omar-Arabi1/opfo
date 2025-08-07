@@ -1,6 +1,9 @@
 # opfo
 opfo **O**ver**P**owerd**F**ile**O**rganizer is an advanced file organizer implemented in python
 
+> [!NOTE]
+> *the app is only available on Linux and MacOs*
+
 ## what it does:
 opfo is a file organizer that organizes your file based on their extension and path set to in the config file located at
 *~/.opfo/opfo.json* there are defaults when you first run the application for common file extensions and the paths they
@@ -85,3 +88,12 @@ which will log useful insight like
 > [!TIP]
 > *it is recommended to run with `-v` if you changed the config right before since it will show you if you wrote the paths*
 > *to the extensions correctly and if there are other extensions that could be added*
+
+## installation:
+the app is available on PyPI run
+
+    pip/pipx install opfo
+
+> [!TIP]
+> *it is recommended to use pipx and not pip because it is better for CLI tools, pip will install the cli tool as a python library*
+> *which it isn't*
