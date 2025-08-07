@@ -2,7 +2,7 @@
 name = "opfo"
 version = "1.0.0"
 description = "opfo OverPowerdFileOrganizer is an advanced file organizer implemented in python"
-readme = "README.md"
+readme = "readme_for_pypi.md"
 requires-python = ">=3.13"
 dependencies = [
     "loguru>=0.7.3",
