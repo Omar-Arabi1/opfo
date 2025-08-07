@@ -25,7 +25,7 @@ may locate to
 
 ## configuration:
 configuring this tool is very easy, but it has some simple rules to follow, first of all the config file is located 
-*~/.opfo/opfo.json* the configuration is written like this:
+at *~/.opfo/opfo.json* the configuration is written like this:
 
 
 `<.extension>: <path/to/extension/>`
@@ -95,5 +95,5 @@ the app is available on PyPI run
     pip/pipx install opfo
 
 > [!TIP]
-> *it is recommended to use pipx and not pip because it is better for CLI tools, pip will install the cli tool as a python library*
+> *it is recommended to use pipx and not pip because it is better for CLI tools, also pip will install the cli tool as a python library*
 > *which it isn't*
