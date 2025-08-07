@@ -44,8 +44,8 @@ some things that may make your config invalid:
 - the path you are pointing to doesn't exist `i/do/not/exist`
 
 > [!TIP]
-> *if you deleted or changed a path to a directory that was pointed to by an extension make sure to change it or that*
-> *would result in an error that is why it is recommended to run --check whenever you changed something related to the*  > *config*
+> *if you deleted a folder that was pointed to in the config make sure to change it or that would result in an error*
+> *which is why it is recommended to run [`--check`](#the-check-option) anytime you change something related to the config*
 
 ## the check option:
 the `--check` option allows you to check the configuration on wether its valid or not, this option
