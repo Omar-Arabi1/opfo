@@ -34,8 +34,8 @@ at *~/.opfo/opfo.json* the configuration is written like this:
 for example:
 
     {
-        .png: /home/<user>/Pictures,
-        .md: /home/<user>/Documents
+        ".png": "/home/<user>/Pictures",
+        ".md": "/home/<user>/Documents"
     }
 
 > [!IMPORTANT]
