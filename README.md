@@ -79,5 +79,9 @@ if you want to see logs on what is happening in the organization run
     opfo --verbose/-v
 
 which will log useful insight like
-- `[ INFO ] pic.png moved to ~/Pictures dir` for moved files that were included in the config
-- `[ WARNING ] extension .tar is not supported in the config` if it encountered a file with an extension that wasn't in the config
+- `[ INFO ] pic.png moved to ~/Pictures dir` for moved files that were included in the config (will be printed in green)
+- `[ WARNING ] extension .tar is not supported in the config` if it encountered a file with an extension that wasn't in the config (will be printed in orange)
+
+> [!TIP]
+> *it is recommended to run with `-v` if you changed the config right before since it will show you if you wrote the paths*
+> *to the extensions correctly and if there are other extensions that could be added*
