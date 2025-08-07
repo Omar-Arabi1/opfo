@@ -56,9 +56,7 @@ runs automatically when you try to organize the fles, but you could run it alone
 
 once the option is ran through
 
+    opfo --check/-c
 
-`opfo --check/-c`
-
-
-it should log `[ INFO ] All Good!` if anything wrong with the config was encountered like a path doesn't exist
-or is a file not a direcotry, it will log good info like the path and its extension to help you fix it
+it should log `[ INFO ] All Good!` if nothing was wrong with the config, it will log good info on any issue in the config
+like the extension that has the error or the path related to it so read the logs if you encounter anything wrong!
