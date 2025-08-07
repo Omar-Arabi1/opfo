@@ -29,10 +29,11 @@ configuring this tool is very easy, but it has some simple rules to follow, firs
 
 
 for example:
-`{`
-`   .png: /home/<user>/Pictures,`
-`   .md: /home/<user>/Documents`
-`}`
+
+    {
+    .png: /home/<user>/Pictures,
+    .md: /home/<user>/Documents
+    }
 
 > [!IMPORTANT]
-> *extensions are only valid if they start with a . so you can't write png that won't be accepted write .png*
+> *extensions are only valid if they start with a . so you can't write png that won't be accepted, write .png*
