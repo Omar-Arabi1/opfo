@@ -60,3 +60,24 @@ once the option is ran through
 
 it should log `[ INFO ] All Good!` if nothing was wrong with the config, it will log good info on any issue in the config
 like the extension that has the error or the path related to it so read the logs if you encounter anything wrong!
+
+## the organization:
+running
+
+    opfo
+
+will loop through all files in the current working directory and through your config it will know what extensions should go
+to what path, and the command will actually run [`--check`](#the-check-option) option in the background and if it detects any
+issues with the config it will log those issues and exit, until they are fixed no file organization will happen
+
+
+the application doesn't go through hidden files as well only non-hidden
+
+
+if you want to see logs on what is happening in the organization run
+
+    opfo --verbose/-v
+
+which will log useful insight like
+- `[ INFO ] pic.png moved to ~/Pictures dir` for moved files that were included in the config
+- `[ WARNING ] extension .tar is not supported in the config` if it encountered a file with an extension that wasn't in the config
