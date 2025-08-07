@@ -1,12 +1,17 @@
 import os
 import json
 import shutil
+import sys
 
 from util.get_logger import get_logger
 from util.is_hidden import is_hidden
+from .check import check_config
 
 def organize_files(config_file: str, verbose: bool) -> None:
     logger = get_logger()
+    if not check_config(config_file=config_file):
+        sys.exit(1)
+
     with open(config_file, 'r', encoding='utf-8') as file:
         paths: dict = json.load(file)
 
@@ -16,6 +21,7 @@ def organize_files(config_file: str, verbose: bool) -> None:
             continue
         if is_hidden(file=file):
             continue
+
         _, file_ext = os.path.splitext(file)
         path_to_ext = paths.get(file_ext)
         if path_to_ext is not None and verbose:
