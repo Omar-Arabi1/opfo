@@ -7,7 +7,7 @@ from util.get_logger import get_logger
 from .organize_files import organize_files
 
 class Cli:
-    __version__ = '1.0.0'
+    __version__ = '1.0.1'
     def setup(self) -> Namespace:
         parser = argparse.ArgumentParser(prog="opfo", description="opfo is an advanced file organizer implemented in python")
         parser.add_argument("-V", "--version", action="version",version=f"%(prog)s {self.__version__}")
